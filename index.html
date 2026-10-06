@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ==========================================================
+       SEO — TROCAR POR CLIENTE (único trecho de conteúdo fora do
+       js/script.js, porque buscadores leem melhor o <head> em HTML)
+       ========================================================== -->
+  <title>NOIR BARBER | Barbearia premium</title>
+  <meta name="description" content="Corte, barba e cuidados masculinos com acabamento de navalha e atendimento com hora marcada. Agende pelo WhatsApp na NOIR BARBER.">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Compartilhamento (WhatsApp, Facebook, LinkedIn). A imagem precisa ser uma URL completa; ao usar a foto do cliente, use https://seudominio.com/images/hero.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="NOIR BARBER | Barbearia premium">
+  <meta property="og:description" content="Corte, barba e cuidados masculinos com acabamento de navalha. Agende pelo WhatsApp.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1672642150228-3fcd5826ec26?auto=format&fit=crop&q=75&w=1200">
+
+  <!-- Favicon simples (letra N dourada). Para trocar: <link rel="icon" href="images/favicon.png"> -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='40' font-weight='700' text-anchor='middle' fill='%23c9a55c'%3EN%3C/text%3E%3C/svg%3E">
+
+  <!-- Fontes: Cormorant Garamond (títulos) + Jost (textos). Para trocar, altere aqui e as variáveis --font-* no CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap">
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="header">
+    <div class="container header__inner">
+
+      <!-- LOGO: o arquivo é definido em CONFIG.brand.logo (js/script.js). Se a imagem falhar, aparece o nome em texto. -->
+      <a class="brand" href="#inicio" data-brand-link aria-label="Voltar ao início">
+        <img data-logo width="138" height="46" alt="">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Menu principal">
+        <ul class="nav__list" data-render="nav"></ul>
+        <a class="btn btn--gold nav__cta" data-link="whatsapp" data-text="header.cta"></a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img data-image="hero" width="1920" height="1080" fetchpriority="high" alt="">
+      </div>
+
+      <div class="container hero__content">
+        <p class="hero__tagline" data-text="brand.tagline"></p>
+        <h1 id="hero-title" data-text="hero.title"></h1>
+        <p class="hero__lead" data-text="hero.subtitle"></p>
+        <div class="hero__actions">
+          <a class="btn btn--gold btn--lg" data-link="whatsapp">
+            <span data-icon="whatsapp"></span><span data-text="hero.primaryCta"></span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#servicos" data-text="hero.secondaryCta"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SOBRE ===================== -->
+    <section class="section about" id="sobre" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="arch">
+          <img data-image="about" width="900" height="1100" loading="lazy" alt="">
+        </figure>
+        <div class="about__text">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="about-title" data-text="about.title"></h2>
+          <div class="prose" data-render="about-paragraphs"></div>
+          <dl class="stats" data-render="about-stats"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVIÇOS ===================== -->
+    <section class="section services" id="servicos" aria-labelledby="services-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="services-title" data-text="services.title"></h2>
+          <p data-text="services.intro"></p>
+        </header>
+        <div class="services__grid" data-render="services"></div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="gallery-title" data-text="gallery.title"></h2>
+          <p data-text="gallery.intro"></p>
+        </header>
+        <div class="gallery__grid" data-render="gallery"></div>
+        <p class="gallery__more">
+          <a class="link-gold" data-link="instagram"><span data-icon="instagram"></span><span data-text="gallery.instagramCta"></span></a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== DIFERENCIAIS ===================== -->
+    <section class="section features" id="diferenciais" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="features-title" data-text="features.title"></h2>
+        </header>
+        <ul class="features__grid" data-render="features"></ul>
+      </div>
+    </section>
+
+    <!-- ===================== AVALIAÇÕES ===================== -->
+    <section class="section reviews" id="avaliacoes" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="reviews-title" data-text="testimonials.title"></h2>
+          <p data-text="testimonials.note"></p>
+        </header>
+        <div class="reviews__grid" data-render="testimonials"></div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta__box">
+          <img class="cta__bg" data-image="cta" width="1600" height="900" loading="lazy" alt="">
+          <h2 id="cta-title" data-text="cta.title"></h2>
+          <p data-text="cta.text"></p>
+          <a class="btn btn--gold btn--lg" data-link="whatsapp">
+            <span data-icon="whatsapp"></span><span data-text="cta.button"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LOCALIZAÇÃO ===================== -->
+    <section class="section location" id="contato" aria-labelledby="location-title">
+      <div class="container location__grid">
+        <div class="location__info">
+          <span class="rule" aria-hidden="true"></span>
+          <h2 id="location-title" data-text="location.title"></h2>
+          <ul class="contact-list" data-render="contact-list"></ul>
+          <div class="location__actions">
+            <a class="btn btn--ghost" data-link="maps" data-text="location.mapsCta"></a>
+          </div>
+        </div>
+        <!-- MAPA: cole a URL do Google Maps em CONFIG.contact.mapsEmbedUrl. Enquanto estiver vazia, aparece um espaço reservado. -->
+        <div class="map" data-render="map"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="#inicio" data-brand-link aria-label="Voltar ao início">
+          <img data-logo width="138" height="46" alt="" loading="lazy">
+        </a>
+        <p data-text="footer.about"></p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <ul class="footer__links" data-render="footer-nav"></ul>
+      </nav>
+      <ul class="footer__social" data-render="footer-social"></ul>
+    </div>
+    <div class="container footer__bottom">
+      <p data-render="copyright"></p>
+      <p data-render="credit"></p>
+      <p class="footer__note" data-text="footer.photoNote"></p>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp (aparece após rolar a página) -->
+  <a class="fab" id="fab" data-link="whatsapp" data-aria="fab.label"><span data-icon="whatsapp"></span></a>
+</body>
+</html>
